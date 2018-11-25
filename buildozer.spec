@@ -103,7 +103,7 @@ android.ndk = 9
 android.private_storage = False
 
 # (str) Android NDK directory (if empty, it will be automatically downloaded.)
-android.ndk_path = /home/kivy/Android/crystax-ndk-10.3.2/
+#android.ndk_path = /home/kivy/Android/crystax-ndk-10.3.2/
 
 # (str) Android SDK directory (if empty, it will be automatically downloaded.)
 #android.sdk_path =
@@ -196,7 +196,7 @@ android.arch = armeabi-v7a
 #
 
 # (str) python-for-android git clone directory (if empty, it will be automatically cloned from github)
-p4a.source_dir = /home/kivy/Repos/python-for-android/
+#p4a.source_dir = /home/kivy/Repos/python-for-android/
 
 # (str) The directory in which python-for-android should look for your own build recipes (if any)
 #p4a.local_recipes =
