@@ -1,0 +1,184 @@
+<WelcomeScreen>
+    AnchorLayout:
+        anchor_x: "center"
+
+        BoxLayout:
+            orientation: "vertical"
+            size_hint: (0.5, 1)
+            spacing: 10
+
+            Label:
+                size_hint_y: .4
+                text: "COORDINATES\nfor\nKIDS"
+                halign: "center"
+                bold: True
+                font_size: 50
+                padding: 0, 0
+
+            AnchorLayout:
+                anchor_x: "center"
+                size_hint_y: .6
+
+                BoxLayout:
+                    size_hint: 1, .5
+                    orientation: "vertical"
+                    spacing: 10
+
+                    Button:
+                        halign: "center"
+                        valign: "middle"
+                        text: "Points"
+                        on_press: root.manager.current = "playground_screen"
+
+                    Button:
+                        halign: "center"
+                        valign: "middle"
+                        text: "Coordinates"
+                        on_press: root.manager.current = "playground_screen2"
+
+
+<PlaygroundScreen>:
+    game_engine: playground_widget_id
+
+    Playground:
+        id: playground_widget_id
+
+<PlaygroundScreen2>:
+    game_engine2: playground2_widget_id
+
+    Playground2:
+        id: playground2_widget_id
+
+<Playground>
+	b1: b1_id
+	b2: b1_id
+	lbl: lbl_id
+	lbl_t: lbl_t_id
+	lbl_f: lbl_f_id
+	pw: pw_id
+	btn: btn_id
+
+	BoxLayout:
+		id: b1_id
+		width: 480
+		height: 640
+		orientation: "vertical"
+		padding: [20]
+		spacing: 10
+
+		Label:
+			id: lbl_id
+			text: root.txt
+			font_size: 70
+			size_hint: (1, .2)
+
+		PainterWidget:
+			id: pw_id
+			size_hint: (1, .6)
+
+		BoxLayout:
+			id: b2_id
+			orientation: "horizontal"
+			padding: [20]
+			spacing: 10
+			size_hint: (1, .2)
+			
+			Label:
+				id: lbl_t_id
+				text: str(root.score_t)
+				color: [0, 1, 0, 1]
+				font_size: 70
+				size_hint: (.33, 1)
+			Label:
+				id: lbl_f_id
+				text: str(root.score_f)
+				color: [1, 0, 0, 1]
+				font_size: 70
+				size_hint: (.33, 1)
+			Button:
+				id: btn_id
+				text: "Back"
+				size_hint: (.33, 1)
+				on_press: root.press_btn()
+
+<Playground2>
+	b1: b1_id
+	b2: b2_id
+	b3: b3_id
+	lbl_t: lbl_t_id
+	lbl_f: lbl_f_id
+	lbl1: lbl1_id
+	lbl2: lbl2_id
+	ti1: ti1_id
+	ti2: ti2_id
+	pw: pw_id
+	btn1: btn1_id
+	btn2: btn2_id
+
+	BoxLayout:
+		id: b1_id
+		width: 480
+		height: 640
+		orientation: "vertical"
+		padding: [20]
+		spacing: 10
+		
+		BoxLayout:
+			id: b3_id
+			orientation: "horizontal"
+			padding: [20]
+			spacing: 10
+			size_hint: (1, .2)
+			
+			Label:
+				id: lbl1_id
+				text: 'X'
+				font_size: 50
+				size_hint: (.10, 1)
+			TextInput:
+				id: ti1_id
+				font_size: 50
+				size_hint: (.25, 1)
+				input_filter: "int"
+			Label:
+				id: lbl2_id
+				text: 'Y'
+				font_size: 50
+				size_hint: (.10, 1)
+			TextInput:
+				id: ti2_id
+				font_size: 50
+				size_hint: (.25, 1)
+				input_filter: "int"
+			Button:
+				id: btn2_id
+				text: "OK"
+				size_hint: (.30, 1)
+				on_press: root.press_ok_btn()
+		PainterWidget:
+			id: pw_id
+			size_hint: (1, .6)
+		BoxLayout:
+			id: b2_id
+			orientation: "horizontal"
+			padding: [20]
+			spacing: 10
+			size_hint: (1, .2)
+			
+			Label:
+				id: lbl_t_id
+				text: str(root.score_t)
+				color: [0, 1, 0, 1]
+				font_size: 70
+				size_hint: (.33, 1)
+			Label:
+				id: lbl_f_id
+				text: str(root.score_f)
+				color: [1, 0, 0, 1]
+				font_size: 70
+				size_hint: (.33, 1)
+			Button:
+				id: btn1_id
+				text: "Back"
+				size_hint: (.33, 1)
+				on_press: root.press_btn()
