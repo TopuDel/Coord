@@ -75,7 +75,7 @@ osx.kivy_version = 1.9.1
 #
 
 # (bool) Indicate if the application should be fullscreen or not
-fullscreen = 1
+fullscreen = 0
 
 # (string) Presplash background color (for new android toolchain)
 # Supported formats are: #RRGGBB #AARRGGBB or one of the following names:
@@ -88,16 +88,16 @@ fullscreen = 1
 android.permissions = INTERNET
 
 # (int) Android API to use
-android.api = 27
+#android.api = 27
 
 # (int) Minimum API required
-android.minapi = 9
+#android.minapi = 9
 
 # (int) Android SDK version to use
-android.sdk = 23
+#android.sdk = 23
 
 # (str) Android NDK version to use
-android.ndk = 9
+#android.ndk = 9
 
 # (bool) Use --private data storage (True) or --dir public storage (False)
 android.private_storage = False
